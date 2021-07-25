@@ -17,4 +17,4 @@ const seq = new Sequelize('koa2_weibo_db','root','yuhu2020',conf)
 //   console.log('ok')
 // })
 
-module.exports = seq;
+module.exports = seq

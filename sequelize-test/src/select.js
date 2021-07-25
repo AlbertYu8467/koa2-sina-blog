@@ -74,20 +74,20 @@ const {Blog, User} = require('./model')
   //      return blogVal
   //   }))
 
-    // 连表查询2
-    const userListWithBlog = await User.findAndCountAll({
-      attributes:['userName','nickName'],
-      include:[
-        {
-          model: Blog,
-        }
-      ]
-    })
-    console.log(
-      userListWithBlog.count,
-      userListWithBlog.rows.map(user => {
-         const userVal = user.dataValues;// 一个用户有多个博客
-         userVal.blogs = userVal.blogs.map(blog => blog.dataValues);
-         return userVal
-      }))
+  // 连表查询2
+  const userListWithBlog = await User.findAndCountAll({
+    attributes:['userName','nickName'],
+    include:[
+      {
+        model: Blog,
+      }
+    ]
+  })
+  console.log(
+    userListWithBlog.count,
+    userListWithBlog.rows.map(user => {
+      const userVal = user.dataValues// 一个用户有多个博客
+      userVal.blogs = userVal.blogs.map(blog => blog.dataValues)
+      return userVal
+    }))
 })()

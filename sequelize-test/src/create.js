@@ -8,7 +8,7 @@ const {Blog, User} = require('./model')
     password:123,
     nickName:'张三'
   })
-  const zhangsanId = zhangsan.dataValues.id;
+  const zhangsanId = zhangsan.dataValues.id
   console.log(zhangsan.dataValues)
 
   const lisi = await User.create({
@@ -16,7 +16,7 @@ const {Blog, User} = require('./model')
     password:123,
     nickName:'李四'
   })
-  const lisId = lisi.dataValues.id;
+  const lisId = lisi.dataValues.id
 
 
   //创建博客

@@ -10,7 +10,7 @@ const {Blog, User} = require('./model')
 
   //删除用户 
   // 级联删除 要设置外键 cascade
-    const delUserRes = await User.destroy({
+  const delUserRes = await User.destroy({
     where:{
       id:1
     }

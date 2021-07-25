@@ -17,7 +17,7 @@ const User = seq.define('user',{
     comment:'昵称'
   },
   // createAt updateAt自动创建
-});
+})
 
 // 创建Blog模型，表名blog
 const Blog = seq.define('blog', {

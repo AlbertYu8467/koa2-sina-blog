@@ -12,5 +12,5 @@ seq.sync({
   force: true
 }).then(res => {
   console.log('sync ok')
-  process.exit();
+  process.exit()
 })
